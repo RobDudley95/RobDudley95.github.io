@@ -1,0 +1,387 @@
+/* Stylesheet for SOFT20181 Part 1  */
+/* Created by Rob Dudley (N0686602) */
+
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+
+/* main body and HTML */
+
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: lightgray;
+}
+
+/* text formatting */
+
+h1, h2 {
+	font-family: 'Francois One', sans-serif;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+p, ul {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-size: 14pt;
+}
+
+/* unordered list formatting */
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 10pt;
+}
+
+#bold {
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+#delivery {
+    border: 2px solid #DB162F;
+    color: #DB162F;
+}
+
+#deals {
+    border: 2px solid #66A182;
+    color: #66A182;
+}
+
+#payment {
+    border: 2px solid #54577C;
+    color: #54577C;
+}
+
+/* wrapper elements */
+
+.wrapper {
+	height: auto;
+    max-width: 80%;
+	margin: 0 auto;
+}
+
+/* navigation elements */
+
+.topnav {
+    padding-left: 5px;
+    padding-right: 5px;
+	background-color: #2B2B2B;
+	overflow: hidden;
+}
+
+.topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+	font-family: 'Francois One', sans-serif;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.topnav a:hover {
+	background-color: #7180B9;
+	color: #f2f2f2;
+}
+
+.topnav .icon {
+	display: none;
+}
+
+.small {
+	display: none;
+}
+
+.home-1 {
+	display: block;
+}
+
+.home-2 {
+	display: none;
+}
+
+/* main content elements */
+
+.header {
+	max-width: 100%;
+	max-height: 170px;
+}
+
+
+.left {
+    float: left;
+    width: 48%;
+    padding-left: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #009ACD;
+}
+
+.left img {
+    max-height: 130px;
+}
+
+.right {
+    float: left;
+    padding-right: 3%;
+    width: 47%;
+    max-height: 174px;
+    text-align: right;
+    background: #009ACD;
+}
+
+.right img {
+    max-height: 190px;
+}
+
+.content {
+    background: #ffffff;   
+}
+
+.full-width {
+	width: 96%;
+}
+
+.reg {
+    width: 73%;
+}
+
+.col1 {
+    float: left;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 73%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.col2 {
+    float: left;
+    width: 20%;
+    padding: 10px;
+}
+
+#ad {
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    height: auto;
+    background: #A6ACAF;
+    clear: both;
+}
+
+#ad-container {
+    position: relative;
+    max-width: 60%;
+    min-width: 50%;
+    margin: 0 auto;
+}
+
+#ad h1, h2 {
+    margin: 0;
+}
+
+#ad .ad-strapline {
+    padding-top: 4%;
+    padding-bottom: 1%;
+    height: 30pt;
+}
+
+#ad h2 {
+    font-size: 21.1pt;
+    font-family: 'Heebo', sans-serif;
+}
+
+#ad button {
+    padding: 5px 10px 5px 10px;
+    border: 3px solid black;
+    border-radius: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    background: #000;
+    color: #FFF;
+}
+
+.imgright {
+    float: right;
+    bottom: 0;
+    right: 0;
+}
+
+.imgright img {
+    min-height: 200px;
+    max-height: 220px;
+}
+
+.footer {
+    width:  100%;
+    margin: 0 auto;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+    background: #2B2B2B;
+    color: #ffffff;
+    clear: both;
+}
+
+/* media queries */
+
+table {
+    text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+	.wrapper {
+		max-width: 100%;
+		margin: 0;
+		box-shadow: 0;
+	}
+    
+    #topnav-sticky {
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+    
+    .topnav {
+        position: fixed;
+        right: 0;
+        background: #009ACD;
+        padding: 0;
+    }
+	
+	.topnav a {
+        display: none;
+		margin: 0;
+        color: #000;
+        text-align: center;
+	}
+    
+    .topnav a.icon {
+		float: right;
+		display: block;
+	}
+	
+	.topnav.responsive {
+		position: relative;
+	}
+	.topnav.responsive a.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+    
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		margin: 0;
+		text-align: left;
+	}
+	
+	.small {
+		display: block;
+	}
+	
+	.home-1 {
+		display: none;
+	}
+	
+	.home-2 {
+		display: block;
+	}
+    
+    .left {
+        width: 98%;
+        text-align: center;
+    }
+    
+    .right {
+        display: none;
+    }
+
+	.col1 {
+        padding-bottom: 0;
+		width: 100%;
+	}
+    
+    .left img {
+        max-width: 50%;
+    }
+    
+    .col2 {
+        padding-top: 0;
+        width: 100%;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 25pt;
+    }
+    
+    p {
+        text-align: center;
+        font-size: 12pt;
+    }    
+}
+
+@media screen and (max-width: 700px) {
+    #ad-container {
+        min-width: 100%;
+        text-align: center;
+    }
+    
+    .imgright {
+        width: 100%;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+	.wrapper {
+		max-width: 100%;
+		margin: 0;
+	}
+	
+	.col1 {
+        padding-left: 5%;
+        padding-right: 5%;
+		width: 90%;
+	}
+	
+	.col2 {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 2%;
+		width: 90%;
+	}
+}
+    
+@media screen and (max-width: 1100px) {
+    #ad-container {
+        max-width: 70%;
+        min-width: 60%;
+    }
+}
