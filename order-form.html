@@ -7,70 +7,188 @@
         <link rel="stylesheet" href="style.css"/>
         <script src="https://use.fontawesome.com/a556ea828c.js"></script>
         <script src="nav.js"></script>
+        <script src="order-form.js"></script>
+        <script src="populate-selection.js"></script>
+        <script src="form-val.js"></script>
     </head>
-    <body>
-        <div class="wrapper">
-            <div class="topnav" id="nav">
-				<!-- display blank on smaller screens -->
-				<a href="index.html">
-					<!-- display home icon on larger screens -->
-					<span class="home-1"><i class="fa fa-home" aria-hidden="true"></i></span>
-					<!-- display 'Home' on smaller screens -->
-					<span class="home-2">Home</span>
-				</a>
-				<a href="products.html">Phones</a>
-				<a href="gallery.html">Latest Releases</a>
-				<a href="order-form.html">Order Form</a>
-				<a href="report.html">Report</a>
-				<a href="javascript:void(0);" class="icon" onclick="menuFunc()">&#9776;</a>
-			</div>
-            <div class="header">
-                <div class="left">
+    <body onload="loadXMLDoc(); getYear()">
+        <div id="wrapper">
+            <div id="topnav-sticky">
+                <div class="topnav" id="nav">
+                    <!-- display blank on smaller screens -->
+                    <a href="index.html">
+                        <!-- display home icon on larger screens -->
+                        <span class="home-1"><i class="fa fa-home" aria-hidden="true"></i></span>
+                        <!-- display 'Home' on smaller screens -->
+                        <span class="home-2">Home</span>
+                    </a>
+                    <a href="products.html">Phones</a>
+                    <a href="gallery.html">Latest Releases</a>
+                    <a href="order-form.html">Order Form</a>
+                    <a href="report.html">Report</a>
+                    <a href="javascript:void(0);" class="icon" onclick="menuFunc()">&#9776;</a>
+                </div>
+            </div>
+            <div id="header">
+                <div id="left">
                     <img src="images/logo.png" alt="PhoneGuys"/>
                 </div>
-                <div class="right">
+                <div id="right">
                     <img src="images/headtest.png" alt="header"/>
                 </div>
             </div>
-            <div class="content">
-                <div class="col1 full-width">
-                    <h1>Order Form</h1>
-                <form>
-                    <table>
-                        <tr>
-                            <th>
-                                <label for="title">Title</label>
-                            </th>
-                            <th>
-                                <select id="title">
-                                    <option value="mr">Mr</option>
-                                    <option value="mrs">Mrs</option>
-                                    <option value="miss">Miss</option>
-                                    <option value="ms">Ms</option>
-                                </select>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="firstname">First name</label>
-                            </th>
-                            <th>
-                                <input id="firstname" type="text"><br>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="surname">Surname</label>
-                            </th>
-                            <th>
-                                <input id="surname" type="text"><br>
-                            </th>
-                        </tr>
-                    </table>
+            <div id="content">
+                <form method="post" action="success.html" onsubmit="return submitVal()" name="orderForm">
+                    <div class="col1">
+                        <h1>Can I take your order?...</h1>                    
+                            <table class="orderForm" style="width: 100%;">
+                                <tr>
+                                    <td><h2>Choose a phone</h2><br></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select onchange="loadXMLDoc1()" onfocusout="selectVal()" id="selectionBox"></select>
+                                        <div style="color:red;" id="select_val"></div><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><h2>What's your name?</h2><br></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="title">Title</label><br>
+                                        <select id="title">
+                                            <option value="mr">Mr</option>
+                                            <option value="mrs">Mrs</option>
+                                            <option value="miss">Miss</option>
+                                            <option value="ms">Ms</option>
+                                        </select>
+                                        <br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="firstname">First name</label><br>
+                                        <input id="firstname" type="text" onfocusout="firstnameVal()">
+                                        <div style="color:red;" id="fn_val"></div><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="surname">Surname</label><br>
+                                        <input id="surname" type="text" onfocusout="surnameVal()">
+                                        <div style="color:red;" id="sn_val"></div><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><h2>How about your contact details?</h2><br></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="phoneNumber">Phone number</label><br>
+                                        <input id="phoneNumber" type="text" onfocusout="phoneVal()">
+                                        <div style="color:red;" id="num_val"></div><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email">E-mail address</label><br>
+                                        <input id="email" type="text" onfocusout="emailVal()">
+                                        <div style="color:red;" id="email_val"></div><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="confirmemail_hidden" style="width: 100%;">
+                                        <label for="confirmemail">Confirm e-mail address</label><br>
+                                        <input id="confirmemail" type="email" onfocusout="emailVal2()">
+                                        <div style="color:red;" id="email_val2"></div><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><h2>And your address?</h2><br></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="addressline1">Address Line 1</label><br>
+                                        <input id="addressline1" type="text" onfocusout="addressVal()">
+                                        <div style="color:red;" id="address_val"></div><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="addressline2">Address Line 2</label><br>
+                                        <input id="addressline2" type="text"><br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="addressline3">Address Line 3</label><br>
+                                        <input id="addressline3" type="text"><br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="town">Town/City</label><br>
+                                        <input id="town" type="text" onfocusout="addressTownVal()">
+                                        <div style="color:red;" id="town_val"></div><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="postcode">Postcode</label><br>
+                                        <input id="postcode" type="text" onfocusout="addressPostcodeVal()">
+                                        <div style="color:red;" id="postcode_val"></div><br>
+                                    </td>
+                                </tr>
+                            </table>
+                    </div>
+                    <div class="col2" style="padding-top: 2%;">
+                        <h2>Your purchase</h2>
+                        <div id="selection">
+                            <p>You need to select a phone first</p>
+                        </div>
+                        <div id="readytopay" style="display:none;">
+                            <h2>Ready to pay?</h2>
+                            <p class="caption">Total to pay today</p>
+                            <p class="cost"><span id="total"></span></p><br>
+                            <label for="cardNumber">Card number</label><br>
+                            <div id="cardNoContainer">
+                                <input id="cardNumber" type="text" onkeyup="cardVal()" onfocusout="cardVal2()"><br>
+                                <div id="cardLogo">
+                                    <div id="card_val" style="text-align: right;"></div>
+                                </div>
+                                <div style="color:red;" id="card_val2"></div><br>
+                            </div>
+                            <br>
+                            <label for="expiryDate1">Expiry date</label><br>
+                            <select id="expiryDate1">
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <span> / </span>
+                            <select id="expiryDate2"></select>
+                            <br><br>
+                            <label for="cvv">CVV</label><br>
+                            <input id="cvv" type="text" onfocusout="cvvVal()">
+                            <div style="color:red;" id="cvv_val"></div><br>
+                            <button type="submit" id="submitForm" onclick="submitVal()">Pay Now</button>
+                            <div style="color:red;" id="cvv_val"></div>
+                            <p>We'll take the first payment today, and we'll be in touch soon regarding subsequent monthly payment dates.</p>
+                        </div>
+                    </div>
                 </form>
-                </div>
-                <div class="footer">
-                    <p>Copyright &copy; 2017 Rob Dudley</p>
+                <div id="footer">
+                    <p>Copyright &copy; 2018 Robert Dudley</p>
                 </div>
             </div>
         </div>

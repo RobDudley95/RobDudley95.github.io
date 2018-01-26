@@ -12,16 +12,21 @@ body, html {
 	margin: 0;
 	padding: 0;
 	background: lightgray;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* text formatting */
 
-h1, h2 {
+h1, h2, h3 {
 	font-family: 'Francois One', sans-serif;
 }
 
 h1 {
     font-size: 30pt;
+}
+
+h3 {
+    margin: 0;
 }
 
 p, ul {
@@ -46,10 +51,10 @@ li {
     margin-bottom: 10px;
     padding: 10px;
     text-align: center;
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
-#bold {
+.bold {
     font-weight: bold;
     font-size: 12pt;
 }
@@ -71,7 +76,7 @@ li {
 
 /* wrapper elements */
 
-.wrapper {
+#wrapper {
 	height: auto;
     max-width: 80%;
 	margin: 0 auto;
@@ -125,13 +130,13 @@ li {
 
 /* main content elements */
 
-.header {
+#header {
 	max-width: 100%;
 	max-height: 170px;
 }
 
 
-.left {
+#left {
     float: left;
     width: 48%;
     padding-left: 2%;
@@ -140,11 +145,11 @@ li {
     background: #009ACD;
 }
 
-.left img {
-    max-height: 130px;
+#left img {
+    max-height: 129px;
 }
 
-.right {
+#right {
     float: left;
     padding-right: 3%;
     width: 47%;
@@ -153,16 +158,21 @@ li {
     background: #009ACD;
 }
 
-.right img {
+#right img {
     max-height: 190px;
 }
 
-.content {
+#content {
     background: #ffffff;   
 }
 
 .full-width {
-	width: 96%;
+    float: left;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 96%;
+	font-family: 'Opens Sans', sans-serif;
 }
 
 .reg {
@@ -184,7 +194,23 @@ li {
     padding: 10px;
 }
 
+.col2 img {
+    height: 200px;
+    vertical-align: center;
+}
+
+.fullpage {
+    float: left;
+    width: 96%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/* bottom ad elements */
+
 #ad {
+    position: relative;
     margin-bottom: 20px;
     padding-bottom: 30px;
     height: auto;
@@ -192,7 +218,7 @@ li {
     clear: both;
 }
 
-#ad-container {
+.ad-container {
     position: relative;
     max-width: 60%;
     min-width: 50%;
@@ -225,6 +251,17 @@ li {
     color: #FFF;
 }
 
+button {
+    padding: 5px 10px 5px 10px;
+    border: 3px solid black;
+    border-radius: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    background: #000;
+    color: #FFF;
+}
+
 .imgright {
     float: right;
     bottom: 0;
@@ -232,11 +269,10 @@ li {
 }
 
 .imgright img {
-    min-height: 200px;
-    max-height: 220px;
+    height: 200px;
 }
 
-.footer {
+#footer {
     width:  100%;
     margin: 0 auto;
     padding-top: 1px;
@@ -247,14 +283,230 @@ li {
     clear: both;
 }
 
-/* media queries */
+#footer p {
+    font-size: 12pt;
+}
+
+/* slideshow elements */
+
+.slideshow-container {
+    float: left;
+    top: 0;
+    left: 0;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    width: 68%;
+}
+
+.slideshow-caption {
+    float: right;
+    top: 0;
+    right: 0;
+    width: 27%;
+    margin-right: 20px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+/* product list elements */
+
+#filter {
+    max-width: 97%;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 30px;
+    border: 3px solid black;
+    border-radius: 15px;
+    background: #eee;
+    color: #000;
+}
+
+#filter td {
+    vertical-align: top;
+}
+
+#filter p {
+    font-size: 10pt;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+#filter select {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 150px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+}
+
+#filter button {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    background: darkgray;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+}
+
+#filter img {
+    height: 25px;
+}
+
+.product {
+    float: left;
+    width: 21%;
+    border: 4px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    -o-transition:.5s;
+	-ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    text-align: center;
+}
+
+.product h2 {
+    margin-top: 0;
+    
+}
+
+.brand {
+    margin-bottom: 0;
+    font-size: 16pt;
+}
+
+.name {
+    margin-bottom: 20px;
+    font-size: 19pt;
+}
+
+.product img {
+    text-align: center;
+    max-width: 100%;
+    height: 200px;
+}
+
+.features {
+    height: 20px;
+    margin: 5px;
+    text-align: center;
+}
+
+.product:hover {
+    background-color: #eee;
+}
+
+.caption {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+.cost {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: bolder;
+    font-size: 20pt;
+    color: green;
+}
+
+.product button {
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    background: #000;
+    color: #fff;
+}
+
+/* form elements */
+
+#selectionBox, #title, #firstname, #surname, #phoneNumber, #email, #confirmemail, #addressline1, #addressline2, #addressline3, #town, #postcode, #cardNumber, #expiryDate1, #expiryDate2, #cvv {
+    padding: 10px;
+    width: 90%;
+    border: 1px solid gray;
+    border-radius: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+}
+
+#confirmemail_hidden {
+    display: none;
+}
+
+#selectionBox:focus, #title:focus, #firstname:focus, #surname:focus, #phonenumber:focus, #email:focus, #confirmemail:focus, #addressline1:focus, #addressline2:focus, #addressline3:focus, #town:focus, #postcode:focus, #cardNumber:focus, #expirydate1:focus, #expirydate2:focus {
+    outline: none;
+    border-color: #009ACD;
+    box-shadow: 0 0 10px #009ACD;
+}
+
+#expiryDate1, #expiryDate2, #cvv {
+    width: 35%;
+}
+
+.card {
+    max-height: 10px;
+}
+
+#cardNoContainer {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: inline-block;
+}
+
+#cardLogo {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 5%;
+    vertical-align: middle;
+    line-height: 44px;
+}
+
+/* table elements */
+
+.orderForm td {
+    width: 50%;
+}
 
 table {
     text-align: left;
 }
 
-@media screen and (max-width: 600px) {
-	.wrapper {
+/* media queries */
+
+@media only screen and (max-width: 624px) {
+	#wrapper {
 		max-width: 100%;
 		margin: 0;
 		box-shadow: 0;
@@ -313,12 +565,12 @@ table {
 		display: block;
 	}
     
-    .left {
+    #left {
         width: 98%;
         text-align: center;
     }
     
-    .right {
+    #right {
         display: none;
     }
 
@@ -327,7 +579,7 @@ table {
 		width: 100%;
 	}
     
-    .left img {
+    #left img {
         max-width: 50%;
     }
     
@@ -342,25 +594,20 @@ table {
     }
     
     p {
-        text-align: center;
         font-size: 12pt;
-    }    
-}
-
-@media screen and (max-width: 700px) {
-    #ad-container {
-        min-width: 100%;
+    } 
+    
+    .product {
+        width: 94%;
+        padding: 5px;
+        margin-right: 0;
+        margin-bottom: 4%;
         text-align: center;
     }
-    
-    .imgright {
-        width: 100%;
-        padding-top: 20px;
-    }
 }
 
-@media screen and (max-width: 850px) {
-	.wrapper {
+@media only screen and (max-width: 850px) {
+	#wrapper {
 		max-width: 100%;
 		margin: 0;
 	}
@@ -378,10 +625,57 @@ table {
 		width: 90%;
 	}
 }
+
+@media only screen and (max-width: 1023px) {
+    .ad-container {
+        min-width: 100%;
+        text-align: center;
+    }
     
-@media screen and (max-width: 1100px) {
-    #ad-container {
-        max-width: 70%;
-        min-width: 60%;
+    .imgright {
+        width: 100%;
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 625px) {    
+    .product {
+        width: 45%;
+    }
+    
+    #cardLogo {
+        right: 8%;
+    }
+}
+
+@media only screen and (max-width: 1170px) and (min-width: 1024px) {
+    .col1 {
+        width: 63%;
+    }
+    
+    .col2 {
+        width: 30%;
+    }
+    
+    .product {
+        width: 29%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .slideshow-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .slideshow-caption {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        margin-top: 2%;
+        margin-bottom: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }

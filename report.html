@@ -9,39 +9,56 @@
         <script src="nav.js"></script>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="topnav" id="nav">
-				<!-- display blank on smaller screens -->
-				<a href="index.html">
-					<!-- display home icon on larger screens -->
-					<span class="home-1"><i class="fa fa-home" aria-hidden="true"></i></span>
-					<!-- display 'Home' on smaller screens -->
-					<span class="home-2">Home</span>
-				</a>
-				<a href="products.html">Phones</a>
-				<a href="gallery.html">Latest Releases</a>
-				<a href="order-form.html">Order Form</a>
-				<a href="report.html">Report</a>
-				<a href="javascript:void(0);" class="icon" onclick="menuFunc()">&#9776;</a>
-			</div>
-            <div class="header">
-                <div class="left">
+        <div id="wrapper">
+            <div id="topnav-sticky">
+                <div class="topnav" id="nav">
+                    <!-- display blank on smaller screens -->
+                    <a href="index.html">
+                        <!-- display home icon on larger screens -->
+                        <span class="home-1"><i class="fa fa-home" aria-hidden="true"></i></span>
+                        <!-- display 'Home' on smaller screens -->
+                        <span class="home-2">Home</span>
+                    </a>
+                    <a href="products.html">Phones</a>
+                    <a href="gallery.html">Latest Releases</a>
+                    <a href="order-form.html">Order Form</a>
+                    <a href="report.html">Report</a>
+                    <a href="javascript:void(0);" class="icon" onclick="menuFunc()">&#9776;</a>
+                </div>
+            </div>
+            <div id="header">
+                <div id="left">
                     <img src="images/logo.png" alt="PhoneGuys"/>
                 </div>
-                <div class="right">
+                <div id="right">
                     <img src="images/headtest.png" alt="header"/>
                 </div>
             </div>
-            <div class="col1">
-                <h1>Report</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit tellus eu ligula fringilla molestie. Vestibulum nibh ligula, tincidunt et semper sit amet, varius eu ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Vivamus gravida purus tincidunt orci mattis, et euismod ipsum viverra. Duis cursus diam at sapien rhoncus tempor. Maecenas a tempor quam. Sed justo sem, hendrerit nec enim sed, semper pretium felis. Nulla molestie tortor quis risus vestibulum ullamcorper. Etiam lacinia varius eros, et tincidunt est viverra a. Aliquam erat volutpat. Sed viverra mi in neque auctor dignissim. Vivamus at lorem dui. Nullam pulvinar justo ut lacinia malesuada.</p>
-                <p>Morbi nisi diam, lacinia non tempor non, dignissim ac purus. Cras non turpis dapibus, sagittis magna at, maximus orci. Nunc vitae dui risus. Quisque in enim ligula. Aliquam finibus at orci sed mattis. Etiam scelerisque ut odio non eleifend. Donec consectetur tortor quis lacus pharetra fringilla. Mauris auctor justo eros, sed imperdiet felis tristique at. Aenean tincidunt sodales augue ut faucibus. Phasellus quis ante vitae leo convallis mollis ac et urna.</p>
-            </div>
-            <div class="col2">
-            
-            </div>
-            <div class="footer">
-                <p>Copyright &copy; 2017 Robert Dudley</p>
+            <div id="content">
+                <div class="full-width">
+                    <h1>Report</h1>
+                    <p style="font-weight:bold;">I declare that all work in this assignment is my own, and all content from other sources has been correctly acknowledged.</p>
+                    <h2>Design</h2>
+                    <p>After conducting what I feel to be a sufficient amount of research, and testing a number of colour schemes on the website, I decided that a dark grey menu and footer, accompanied with a sky blue header, and white content area was the most fitting option for the website. I feel that the white text on the menu and footer allows for easy reading, and opted for the "black text, white background" approach for the main content area for accessibility reasons, as people with visual impairments may find other colour schemes difficult to read.</p>
+                    <p>Inspiration for the navigation bar was taken from the W3 Schools website. However, I didn't feel that the tutorial itself provided me with a suitable navigation menu, particularly for mobile devices. Therefore, I coded the navigation bar such that the dark grey colour is replaced with the colour of the header on mobile devices. Also, the menu button follows the user as they scroll down the page - I felt that this design choice was appropriate, given that some it would prove particularly arduous to scroll to the very top to access the menu on some pages.</p>
+                    <p>Every page on the website employs a responsive design. As mentioned before, the navigation bar's design changes depending on the device or screen resolution on which the website is being viewed. The header also changes - as the screen resolution decreases, the logo and the phone on the right hand side move closer together, eventually disappearing on the mobile layout, and placing focus on the logo by centring it.</p>
+                    <p>Where pages employ a two-column layout, the second column is placed below the first column when viewing pages on devices as small as tablets - this is evident on the homepage, the Latest Releases page, and the Order Form page. On the Phones page, a different responsive layout is employed. As the screen resolution is reduced, fewer products are displayed on the same row</p>
+                    <p>On the Latest Releases page, a responsive slideshow is used - for this, inspiration was taken from a tutorial on the W3Schools website. On devices with larger screen resolutions, the user is shown a picture of the featured device on the left hand side of the page, and a description on the right hand side - also on the right hand side are two buttons allowing the user to navigate through the slideshow. When the slideshow is shown on devices with resolutions of 1024x768 or lower, the content on the right hand side of the page is placed below the picture, and the picture becomes a central part of the page.</p>
+                    <h2>JavaScript</h2>
+                    <p>JavaScript is used widely throughout the site - on the Latest Releases page, the Phones page, and on the Order Form page.</p>
+                    <p>On the Phones page, JavaScript is used to load a list of products from an XML file. After loading the XML file, the JavaScript code begins to populate a variable with HTML code, containing details of the phone, including the name, price, an image of the phone, and any features. The code looks for specific keywords in the features, and if it finds these then it places an image inside the div for the product.</p>
+                    <p>On the Latest Releases page, the slideshow is powered by JavaScript. On this page, it is used to load the initial image, and to allow the user to navigate through the slideshow. The code also allows for the reduction of errors - if the user tries to go to the previous image when they are viewing the first image, then the code will load the final image; if the user tries to press the Next button on the final image, then they will be directed to the first image.</p>
+                    <p>The Order Form contains the largest amount of JavaScript on the whole site. When the page loads, the first dropdown menu on the page is populated with a list of phones from the XML file. A small piece of JavaScript code also gets details of the current year, and produces a list of years for the expiry date dropdown menu.</p>
+                    <p>The second piece of JavaScript code apparent on this page is triggered by a selection on the phone dropdown menu - when the user selects a phone, a div is populated with the phone's name and a picture, along with the upfront cost and the price per month; this piece of code also calculates the first payment, by adding together the two cost elements of the device. Also, when the user has selected the phone they wish to purchase, JavaScript code is employed to display the fields requesting their payment information.</p>
+                    <p>The remaining JavaScript code on the page is used for the purpose of validation. If it is found that the user has not filled out a field, either at all or incorrectly, a message will be displayed below the field alerting the user of their error. Much of the code takes advantage of regular expression (Regex) statements to determine whether the input is valid - these statements are used on the phone number, e-mail address, postcode, and card number fields. The card number field is also able to determine the type of card the user is paying with, by extracting the first or second digits, depending on the card type.</p>
+                    <p>The final piece of JavaScript code used on this page is run at the point of submission - if it picks up on any errors the user has made, then it refuses to submit the form, and points out all errors in the same way as the other validation techniques employed on the page.</p>
+                    <h2>References</h2>
+                    <p>W3Schools, n.d.. <span style="font-style:italic;">How TO - Responsive Top Navigation</span> [online] Available at: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp [Accessed 18 November 2017]</p>
+                    <p>W3Schools, n.d.. <span style="font-style:italic;">How TO - Slideshow</span> [online] Available at: https://www.w3schools.com/howto/howto_js_slideshow.asp [Accessed 16 December 2017]</p>
+                </div>
+                <div id="footer">
+                    <p>Copyright &copy; 2018 Robert Dudley</p>
+                </div>
             </div>
         </div>
     </body>

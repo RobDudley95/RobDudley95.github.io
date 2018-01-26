@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phone_list>
+<phone>
+	<brand>Apple</brand>
+	<name>iPhone X</name>
+    <upfrontcost>249</upfrontcost>
+	<price>61</price>
+	<features>4G iOS</features>
+	<image>images/apple-iphone-x.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Apple</brand>
+	<name>iPhone 8</name>
+    <upfrontcost>99</upfrontcost>
+	<price>44</price>
+	<features>4G iOS</features>
+	<image>images/apple-iphone-8.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Apple</brand>
+	<name>iPhone 8 Plus</name>
+    <upfrontcost>99</upfrontcost>
+	<price>49</price>
+	<features>4G iOS</features>
+	<image>images/apple-iphone-8-plus.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Apple</brand>
+	<name>iPhone 7</name>
+    <upfrontcost>99</upfrontcost>
+	<price>33</price>
+	<features>4G iOS</features>
+	<image>images/apple-iphone-7.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Apple</brand>
+	<name>iPhone SE</name>
+    <upfrontcost>0</upfrontcost>
+	<price>18</price>
+	<features>4G iOS</features>
+	<image>images/apple-iphone-se.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Samsung</brand>
+	<name>Galaxy S8 Plus</name>
+    <upfrontcost>99</upfrontcost>
+	<price>36</price>
+	<features>4G Android</features>
+	<image>images/samsung-galaxy-s8-plus.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Samsung</brand>
+	<name>Galaxy J3 2017</name>
+    <upfrontcost>0</upfrontcost>
+	<price>14</price>
+	<features>4G Android</features>
+	<image>images/samsung-galaxy-j3-2017.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Apple</brand>
+	<name>iPhone 6</name>
+    <upfrontcost>29</upfrontcost>
+	<price>25</price>
+	<features>4G iOS</features>
+	<image>images/apple-iphone-6.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Samsung</brand>
+	<name>Galaxy S7</name>
+    <upfrontcost>79</upfrontcost>
+	<price>24</price>
+	<features>4G Android</features>
+	<image>images/samsung-galaxy-s7.png</image>
+</phone>
+<phone category="smartphone">
+<brand>Samsung</brand>
+	<name>Galaxy S8</name>
+    <upfrontcost>99</upfrontcost>
+	<price>31</price>
+	<features>4G Android</features>
+	<image>images/samsung-galaxy-s8.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Honor</brand>
+	<name>9</name>
+    <upfrontcost>29</upfrontcost>
+	<price>19</price>
+	<features>4G Android</features>
+	<image>images/honor-9.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Apple</brand>
+	<name>iPhone 5S</name>
+    <upfrontcost>19</upfrontcost>
+	<price>11</price>
+	<features>4G iOS</features>
+	<image>images/apple-iphone-5s.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Huawei</brand>
+	<name>P10</name>
+    <upfrontcost>49</upfrontcost>
+	<price>21</price>
+	<features>4G Android</features>
+	<image>images/huawei-p10.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Apple</brand>
+	<name>iPhone 7 Plus</name>
+    <upfrontcost>99</upfrontcost>
+	<price>37</price>
+	<features>4G iOS</features>
+	<image>images/apple-iphone-7-plus.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>LG</brand>
+	<name>G6</name>
+    <upfrontcost>79</upfrontcost>
+	<price>26</price>
+	<features>4G Android</features>
+	<image>images/lg-g6.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Huawei</brand>
+	<name>Mate 9</name>
+    <upfrontcost>49</upfrontcost>
+	<price>25</price>
+	<features>4G Android</features>
+	<image>images/huawei-mate-9.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Samsung</brand>
+	<name>Galaxy S7 edge</name>
+    <upfrontcost>79</upfrontcost>
+	<price>30</price>
+	<features>4G Android</features>
+	<image>images/samsung-galaxy-s7-edge.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Honor</brand>
+	<name>6A</name>
+    <upfrontcost>0</upfrontcost>
+	<price>11</price>
+	<features>4G Android</features>
+	<image>images/honor-6a.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Apple</brand>
+	<name>iPhone 6s Plus</name>
+    <upfrontcost>79</upfrontcost>
+	<price>31</price>
+	<features>4G iOS</features>
+	<image>images/apple-iphone-6s-plus.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Apple</brand>
+	<name>iPhone 6s</name>
+    <upfrontcost>29</upfrontcost>
+	<price>29</price>
+	<features>4G iOS</features>
+	<image>images/apple-iphone-6s.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Samsung</brand>
+	<name>Galaxy A3 2017</name>
+    <upfrontcost>19</upfrontcost>
+	<price>17</price>
+	<features>4G Android</features>
+	<image>images/samsung-galaxy-a3-2017.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Samsung</brand>
+	<name>Galaxy A5 2017</name>
+    <upfrontcost>19</upfrontcost>
+	<price>22</price>
+	<features>4G Android</features>
+	<image>images/samsung-galaxy-a5-2017.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>ZTE</brand>
+	<name>Blade V7</name>
+    <upfrontcost>0</upfrontcost>
+	<price>9</price>
+	<features>4G Android</features>
+	<image>images/zte-blade-v7.png</image>
+</phone>
+<phone category="basic">
+	<brand>Alcatel</brand>
+	<name>2045</name>
+    <upfrontcost>0</upfrontcost>
+	<price>7</price>
+	<features>..</features>
+	<image>images/alcatel-2045.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Alcatel</brand>
+	<name>Pixi 3</name>
+    <upfrontcost>0</upfrontcost>
+	<price>7</price>
+	<features>Android</features>
+	<image>images/alcatel-pixi-3.png</image>
+</phone>
+<phone category="basic">
+	<brand>Doro</brand>
+	<name>6520</name>
+    <upfrontcost>0</upfrontcost>
+	<price>7</price>
+	<features>..</features>
+	<image>images/doro-6520.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Honor</brand>
+	<name>6X</name>
+    <upfrontcost>0</upfrontcost>
+	<price>16</price>
+	<features>4G Android</features>
+	<image>images/honor-6x.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Huawei</brand>
+	<name>P10 Plus</name>
+    <upfrontcost>99</upfrontcost>
+	<price>29</price>
+	<features>4G Android</features>
+	<image>images/huawei-p10-plus.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Sony</brand>
+	<name>Xperia XZ Premium</name>
+    <upfrontcost>99</upfrontcost>
+	<price>33</price>
+	<features>4G Android</features>
+	<image>images/sony-xperia-xz-premium.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>LG</brand>
+	<name>Stylus 3</name>
+    <upfrontcost>29</upfrontcost>
+	<price>15</price>
+	<features>4G Android</features>
+	<image>images/lg-stylus-3.png</image>
+</phone>
+<phone category="smartphone">
+	<brand>Motorola</brand>
+	<name>Moto E4 Plus</name>
+    <upfrontcost>0</upfrontcost>
+	<price>16</price>
+	<features>4G Android</features>
+	<image>images/motorola-moto-e4-plus.png</image>
+</phone>
+</phone_list>
